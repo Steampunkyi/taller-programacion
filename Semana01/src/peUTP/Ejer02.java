@@ -1,5 +1,12 @@
 package peUTP;
 
+/**
+ * Ejercicio Nro 2
+ *
+ * @author Steampunkyi
+ * @version 1.0
+ */
+
 public class Ejer02 {
 
     public static void main(String[] args) {

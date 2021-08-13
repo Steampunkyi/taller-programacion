@@ -1,4 +1,4 @@
-package pe.utp;
+package peUTP;
 
 public class HolaMundo {
 

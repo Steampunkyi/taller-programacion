@@ -1,3 +1,3 @@
 # taller-programacion
 
-Archivos para el curso de taller de programación
+Archivos para el curso de taller de programación.

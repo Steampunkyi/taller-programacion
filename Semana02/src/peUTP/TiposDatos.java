@@ -24,5 +24,6 @@ public class TiposDatos {
         f = 3.141685454455141;
         g = '\u00e1';
         h = true;
+        h = true;
     }
 }

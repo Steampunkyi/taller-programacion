@@ -1,5 +1,5 @@
 {
     "oneDarkPro.vivid": true,
     "oneDarkPro.editorTheme": "panda",
-    "java.dependency.packagePresentation": "flat"
+    "java.dependency.packagePresentation": "hierarchical"
 }

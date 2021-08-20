@@ -24,6 +24,15 @@ public class TiposDatos {
         f = 3.141685454455141;
         g = '\u00e1';
         h = true;
-        h = true;
+        // Mostrar datos de variables
+        System.out.println("TIPOS DE DATOS Y SUS CONTENIDOS");
+        System.out.println("Tipo de dato Byte: " + a);
+        System.out.println("Tipo de dato Short: " + b);
+        System.out.println("Tipo de dato Int: " + c);
+        System.out.println("Tipo de dato Long: " + d);
+        System.out.println("Tipo de dato Float: " + e);
+        System.out.println("Tipo de dato Double: " + f);
+        System.out.println("Tipo de dato Char: " + g);
+        System.out.println("Tipo de dato Boolean: " + h);
     }
 }

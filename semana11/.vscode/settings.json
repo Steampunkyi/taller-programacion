@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "workbench.colorTheme": "One Dark Pro Flat",
+    "oneDarkPro.bold": true
+}

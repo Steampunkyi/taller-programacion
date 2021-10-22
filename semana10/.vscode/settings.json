@@ -1,4 +1,12 @@
 {
     "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "bin"
+    "java.project.outputPath": "bin",
+    "oneDarkPro.bold": true,
+    "workbench.colorTheme": "One Dark Pro Flat",
+    "workbench.preferredDarkColorTheme": "Drkryz Theme Color",
+    "oneDarkPro.editorTheme": "Panda",
+    "oneDarkPro.vivid": true,
+    "bracketPairColorizer.highlightActiveScope": true,
+    "bracketPairColorizer.showBracketsInRuler": true,
+    "bracketPairColorizer.showBracketsInGutter": true
 }

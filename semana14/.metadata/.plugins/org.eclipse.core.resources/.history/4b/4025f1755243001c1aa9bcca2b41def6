@@ -1,0 +1,27 @@
+package pe.utp;
+
+import java.util.Scanner;
+
+public class Prueba01 {
+	public static void main(String[] args) {
+		Scanner Leer = new Scanner(System.in);
+		try {
+			System.out.println("Ingrese el nro. de ejercicios");
+			int num = Leer.nextInt();
+			int datos[] = new int[num];
+			datos[100] = 20;
+			System.out.println("Ingrese número 1: ");
+			int nro1 = Leer.nextInt();
+			System.out.println("Ingrese número 2: ");
+			int nro2 = Leer.nextInt();
+			int resp = nro1 / nro2;
+			System.out.println("Respuesta: " + resp);
+			
+
+		} catch (Exception ex) {
+			System.out.println("Error: verifique la entrada de datos");
+		} finally {
+			System.out.println("Proceso concluido");
+		}
+	}
+}

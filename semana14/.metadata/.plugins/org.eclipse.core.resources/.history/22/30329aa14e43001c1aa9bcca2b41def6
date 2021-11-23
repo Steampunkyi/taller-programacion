@@ -1,0 +1,16 @@
+package pe.utp;
+
+import java.util.Scanner;
+
+public class Prueba01 {
+	public static void main(String[] args) {
+		Scanner Leer = new Scanner(System.in);
+		 System.out.println("Ingrese número 1: ");
+		 int nro1 = Leer.nextInt();
+		 System.out.println("Ingrese número 2: ");
+		 int nro2 = Leer.nextInt();
+		 int resp = nro1 / nro2;
+		 System.out.println("Respuesta: "+resp);
+	}
+
+}

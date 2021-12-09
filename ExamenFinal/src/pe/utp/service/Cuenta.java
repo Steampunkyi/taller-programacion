@@ -11,21 +11,17 @@ public class Cuenta {
     private double BalanceCorriente = 0;
     private double BalanceAhorro = 0;
 
-    // input cambiado a Leer
     Scanner Leer = new Scanner(System.in);
-    // Lo que está entre comillas está trabajando en dólares, no lo toco
     DecimalFormat dineroFormato = new DecimalFormat("'$'###,##0.00");
 
     public Cuenta() {
     }
 
-    // Cambie los customerNumber y NumeroPin por las variables modificadas
     public Cuenta(int NumCliente, int NumPin) {
         this.NumCliente = NumCliente;
         this.NumPin = NumPin;
     }
 
-    // checkingBalance y savingBalance por BalanceCorriente y BalanceAhorro
     public Cuenta(int NumCliente, int NumPin, double BalanceCorriente, double BalanceAhorro) {
         this.NumCliente = NumCliente;
         this.NumPin = NumPin;
@@ -33,19 +29,15 @@ public class Cuenta {
         this.BalanceAhorro = BalanceAhorro;
     }
 
-    // Modifico el “int customerNumber” por “int NumCliente”, igualmente en el this
-    // y return
     public int setNumCliente(int NumCliente) {
         this.NumCliente = NumCliente;
         return NumCliente;
     }
 
-    // Modifico el return
     public int getNumCliente() {
         return NumCliente;
     }
 
-    // Modifico el “NumeroPin” por “NumPin” en int, this y return
     public int setNumPin(int NumPin) {
         this.NumPin = NumPin;
         return NumPin;
@@ -55,7 +47,6 @@ public class Cuenta {
         return NumPin;
     }
 
-    // Modifico el return
     public double getBalanceCorriente() {
         return BalanceCorriente;
     }
@@ -64,13 +55,11 @@ public class Cuenta {
         return BalanceAhorro;
     }
 
-    // Cambio “amount” por “monto”
     public double calcComprobacionRetiro(double monto) {
         BalanceCorriente = (BalanceCorriente - monto);
         return BalanceCorriente;
     }
 
-    // Igualmente acá
     public double calcAhorroRetiro(double monto) {
         BalanceAhorro = (BalanceAhorro - monto);
         return BalanceAhorro;
@@ -86,7 +75,6 @@ public class Cuenta {
         return BalanceAhorro;
     }
 
-    // Modificación de checking y saving
     public void calcComprobacionTransferencia(double monto) {
         BalanceCorriente = BalanceCorriente - monto;
         BalanceAhorro = BalanceAhorro + monto;
@@ -101,7 +89,6 @@ public class Cuenta {
         boolean end = false;
         while (!end) {
             try {
-                // Modificando los que println, moneyFormat por dineroFormato como líneas arriba
                 System.out.println("\nSaldo actual de la cuenta corriente: " + dineroFormato.format(BalanceCorriente));
                 System.out.print("\nCantidad que desea retirar de la cuenta corriente: ");
                 double monto = Leer.nextDouble();
@@ -113,8 +100,6 @@ public class Cuenta {
                 } else {
                     System.out.println("\nEl monto en la cuenta no puede ser negativo.");
                 }
-                // El “e” de inputMismatchException no sé si se tendría que modificar, lo dejo a
-                // tu critero
             } catch (InputMismatchException e) {
                 System.out.println("\nSelección incorrecta.");
                 Leer.next();
@@ -137,8 +122,6 @@ public class Cuenta {
                 } else {
                     System.out.println("\nEl monto en la cuenta no puede ser negativo");
                 }
-                // El “e” de inputMismatchException no sé si se tendría que modificar, lo dejo a
-                // tu critero
             } catch (InputMismatchException e) {
                 System.out.println("\nSelección incorrecta");
                 Leer.next();
@@ -150,7 +133,6 @@ public class Cuenta {
         boolean end = false;
         while (!end) {
             try {
-                // Modificado moneyFormat por dineroFormato
                 System.out.println("\nSaldo actual en la cuenta corriente: " + dineroFormato.format(BalanceCorriente));
                 System.out.print("\nCantidad que desea depositar a la cuenta corriente: ");
                 double monto = Leer.nextDouble();
@@ -162,7 +144,6 @@ public class Cuenta {
                 } else {
                     System.out.println("\nEl monto en la cuenta no puede ser negativo.");
                 }
-                // Igualmente acá, el “e”
             } catch (InputMismatchException e) {
                 System.out.println("\nSelección incorrecta.");
                 Leer.next();
@@ -186,7 +167,6 @@ public class Cuenta {
                 } else {
                     System.out.println("\nEl monto en la cuenta no puede ser negativo.");
                 }
-                // Igualmente acá, el “e”
             } catch (InputMismatchException e) {
                 System.out.println("\nSelección incorrecta.");
                 Leer.next();
@@ -194,19 +174,15 @@ public class Cuenta {
         }
     }
 
-    // accType cambiado por TipoCuenta
     public void getIngresoTransferencia(String TipoCuenta) {
         boolean end = false;
         while (!end) {
             try {
-                // ”Checkings” cambiado a “Corriente”
                 if (TipoCuenta.equals("Corriente")) {
                     System.out.println("\nSeleccione una cuenta a la que desee transferir fondos: ");
-                    // Savings cambiado por Ahorros
                     System.out.println("1. Ahorros");
                     System.out.println("2. Salir");
                     System.out.print("\nSelección: ");
-                    // choice modificado por selec
                     int selec = Leer.nextInt();
                     switch (selec) {
                         case 1:
@@ -232,10 +208,8 @@ public class Cuenta {
                             System.out.println("\nSelección incorrecta.");
                             break;
                     }
-                    // Savings modificado por Ahorros
                 } else if (TipoCuenta.equals("Ahorros")) {
                     System.out.println("\nSeleccione una cuenta a la que desee transferir fondos: ");
-                    // Checking cambiado por Corriente
                     System.out.println("1. Corriente");
                     System.out.println("2. Salir");
                     System.out.print("\nSelección:  ");
@@ -264,7 +238,6 @@ public class Cuenta {
                             break;
                     }
                 }
-                // El “e” nuevamente
             } catch (InputMismatchException e) {
                 System.out.println("\nSelección incorrecta.");
                 Leer.next();

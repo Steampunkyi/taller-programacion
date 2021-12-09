@@ -57,7 +57,6 @@ public class OpcionMenu {
                 switch (seleccion) {
                     case 1:
                         getCheque(cuenta1);
-                        // end = true;
                         break;
                     case 2:
                         getAhorro(cuenta1);
